@@ -2,10 +2,10 @@ echo ":::::Windows 10 x64 RDP By D@rkshadow Myanmar:::::"
 echo "Download files windows"
 apt-get update && apt-get upgrade -y
 apt-get clean
-wget -O w10x64.img https://bit.ly/akuhnetW10x64
+wget -O w10x64.img "https://vagrantcloud-files-production.s3-accelerate.amazonaws.com/archivist/boxes/f4faaeb9-2437-4648-a31b-f689818e5229?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA6NDPRW4BRTORCF6S%2F20250708%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250708T005037Z&X-Amz-Expires=900&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHkaCXVzLWVhc3QtMSJHMEUCIQDmd2OaqYf1%2BcKrs7r1W%2FFspBltYDWztdGcvTDbHX1U%2BwIgQf6MXAgU0eAiDfMDbYT%2F2JdvzRnKEmisTid0ZWdWkxQqqQIIgv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAEGgw5OTAyMjM5MDY1NjMiDJxKkHJI%2BKAiCe8y5Cr9AY7TsgD22lnX%2FBq9uJ64bIm2LYB2hxI3KJaAP2ESOSVktj8ZjeOy0ecQ4lHF3I3qBLI97fwv9c%2BF%2FZDGGVOvNflophjvE01gULT78Xzbhnc%2BTBNpb8VrvdeNch5V00nBerjMap1KOhb4vd1As4tK180bC9PDQMbWKRck3IuB07TUSzXQcMeNEHwolcPVEo3ZWhuUoYpYOBme7fOsBRwm2cTYsQQnzuCAXhZ%2FVblg9duCqlTqpyAzrKuzH31HECpfCvl6eoZcI1sC%2FLgqjibrozOy%2FmD3WHpKqKDuAZyrK7HJk8KUL0SMSKY36HLRw6vYfFOHK1gbO6iRm1u5nNcw59WxwwY6nQFRtyTrWiKRMr%2BUCuzd4Mk%2BB%2FQnJ7srF10RqVx4%2B42r90T3OUFUYo7A32TGnP2x9HCbhksRJzxv%2FWxadakKWRtadbtz%2BSFu295JTo1MRGB15J9tmNstQw0hPx0jrZenOH8WBoNjzc0mtqxBoC45F%2F9owSlf2IX2QAlTsSTrQRep%2BvUou6TteibYqfGoE%2B7pHS0%2B4cMAuHF1La%2BpbEmV&X-Amz-SignedHeaders=host&X-Amz-Signature=ec974ea57b8322c58d4f22b543b583a7f5ad005ccea06ced2f34f174174511b5"
 echo "Load ngrok"
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+unzip ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Ctrl + V Authtoken(import token ngrok): " CRP 
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 3388 &>/dev/null &
